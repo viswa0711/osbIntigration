@@ -43,9 +43,11 @@
     <con:pipeline type="request" name="PipelinePairNode1_request"/>
     <con:pipeline type="response" name="PipelinePairNode1_response">
       <con:stage name="stage1">
-        <con:context/>
+        <con:context>
+          <con2:varNsDecl namespace="http://www.example.org/helloWorld/" prefix="hel"/>
+        </con:context>
         <con:actions>
-          <con1:assign varName="body">
+          <con1:assign varName="out">
             <con2:id>_ActionId-9006514792420395269--443b46a1.152b688bb83.-7fe5</con2:id>
             <con1:expr>
               <con2:xqueryText>'Hello world'</con2:xqueryText>
